@@ -1,0 +1,31 @@
+{
+  "name": "Quick Copy - IDなどをサクッとコピー",
+  "short_name": "Quick Copy",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "IDなどを手軽に素早くコピーする拡張機能です",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon_16.png",
+      "48": "icons/icon_48.png"
+    },
+    "default_title": "Quick Copy",
+    "default_popup": "src/browser_action/popup.html"
+  },
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      }
+    }
+  }
+}

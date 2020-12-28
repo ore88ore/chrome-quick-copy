@@ -1,0 +1,69 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickCopy</title>
+    <script src="vendor/js/ulid/index.umd.js"></script>
+    <style type="text/css">
+        body, button, input, select {
+            font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .container-item {
+            padding: 5px;
+        }
+
+        .container-item input, select {
+            width: 120px;
+        }
+
+        .container-item button, input, select {
+            padding: 3px;
+        }
+
+        .btn {
+            background: #e3e3e3;
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            box-shadow: inset 0 0 1px 1px #f6f6f6;
+            text-align: center;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        .btn:hover {
+            background: #d9d9d9;
+            box-shadow: inset 0 0 1px 1px #eaeaea;
+            cursor: pointer;
+        }
+
+        .btn:active {
+            background: #d0d0d0;
+            box-shadow: inset 0 0 1px 1px #e3e3e3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="container-item">
+        <select name="type" id="type">
+            <option value="ulid">ULID</option>
+            <option value="uuid">UUID(v4)</option>
+            <option value="unixtime">Unixtime</option>
+            <option value="unixtime_msec">Unixtime(msec)</option>
+        </select>
+    </div>
+    <div class="container-item">
+        <button id="copy" class="btn">copy</button>
+    </div>
+</div>
+<script type="module" src="popup.js"></script>
+</body>
+</html>
