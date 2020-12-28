@@ -1,7 +1,6 @@
 # Quick Copy - IDなどをサクッとコピー
 
-chrome ウェブストア - Quick Copy - IDなどをサクッとコピー
-https://chrome.google.com/webstore/detail/quick-copy-id%E3%81%AA%E3%81%A9%E3%82%92%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8%E3%82%B3%E3%83%94%E3%83%BC/cniakcmcdofhdajoenifbknmfhacglnj
+[chrome ウェブストア - Quick Copy - IDなどをサクッとコピー](https://chrome.google.com/webstore/detail/quick-copy-id%E3%81%AA%E3%81%A9%E3%82%92%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8%E3%82%B3%E3%83%94%E3%83%BC/cniakcmcdofhdajoenifbknmfhacglnj)
 
 各種IDやUnixtimeなどを手軽に素早くコピーする拡張機能です。
 
