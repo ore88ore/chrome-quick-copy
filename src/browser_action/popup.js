@@ -1,7 +1,21 @@
 import {generate} from "./generate.js";
 
+const DEFAULT_TYPES = [
+    {text: "ULID", value: "ulid"},
+    {text: "UUID(v4)", value: "uuid"},
+    {text: "Unixtime", value: "unixtime"},
+    {text: "Unixtime(msec)", value: "unixtime_msec"}
+];
+
 window.addEventListener("load", (event) => {
     document.getElementById("type").focus();
+    chrome.storage.sync.get("types", (stores) => {
+        const selectElement = document.getElementById("type");
+        const types = stores.types ?? DEFAULT_TYPES;
+        for (const type of types) {
+            selectElement.options[selectElement.options.length] = new Option(type.text, type.value);
+        }
+    });
 });
 
 window.addEventListener("keypress", (event) => {
