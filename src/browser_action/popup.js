@@ -1,19 +1,22 @@
 import {generate} from "./generate.js";
 
-const DEFAULT_TYPES = [
+const TYPES = [
     {text: "ULID", value: "ulid"},
     {text: "UUID(v4)", value: "uuid"},
     {text: "Unixtime", value: "unixtime"},
     {text: "Unixtime(msec)", value: "unixtime_msec"}
 ];
 
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
     document.getElementById("type").focus();
     chrome.storage.sync.get("types", (stores) => {
         const selectElement = document.getElementById("type");
-        const types = stores.types ?? DEFAULT_TYPES;
+        const types = stores.types ?? [];
         for (const type of types) {
-            selectElement.options[selectElement.options.length] = new Option(type.text, type.value);
+            const text = TYPES.find((t) => t.value === type)?.text;
+            if (text) {
+                selectElement.options[selectElement.options.length] = new Option(text, type);
+            }
         }
     });
 });

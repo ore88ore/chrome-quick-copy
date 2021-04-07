@@ -17,6 +17,7 @@
     "default_title": "Quick Copy",
     "default_popup": "src/browser_action/popup.html"
   },
+  "options_page": "src/options/options.html",
   "permissions": [
     "clipboardWrite",
     "storage"

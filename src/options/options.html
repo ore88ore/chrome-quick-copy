@@ -1,0 +1,43 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../vendor/css/bootstrap/bootstrap.min.css">
+  <style type="text/css">
+      .setting-group > h3 {
+          margin-left: 0;
+      }
+      .setting-group > * {
+          margin-left: 30px;
+      }
+  </style>
+  <title>QuickCopy - options</title>
+</head>
+<body>
+<div class="container">
+  <h2>QuickCopy - options</h2>
+  <hr>
+  <section class="setting-group">
+    <h3>表示オプション</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="types" value="ulid" id="ulid">
+      <label class="form-check-label" for="ulid">ULID - (例: <mark>01F2J9DJRE3D0ER1BA3MN7SRPT</mark>)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="types" value="uuid" id="uuid">
+      <label class="form-check-label" for="uuid">UUID(v4) - (例: <mark>f64ff740-c71f-44fc-a057-6c2cb2b81b2f</mark>)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="types" value="unixtime" id="unixtime">
+      <label class="form-check-label" for="unixtime">Unixtime - (例: <mark>1617669233</mark>)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="types" value="unixtime_msec" id="unixtime_msec">
+      <label class="form-check-label" for="unixtime_msec">Unixtime(msec) - (例: <mark>1617669246419</mark>)</label>
+    </div>
+  </section>
+</div>
+
+<script type="module" src="options.js"></script>
+</body>
+</html>
