@@ -1,7 +1,24 @@
 import {generate} from "./generate.js";
 
-window.addEventListener("load", (event) => {
+const TYPES = [
+    {text: "ULID", value: "ulid"},
+    {text: "UUID(v4)", value: "uuid"},
+    {text: "Unixtime", value: "unixtime"},
+    {text: "Unixtime(msec)", value: "unixtime_msec"}
+];
+
+window.addEventListener("load", () => {
     document.getElementById("type").focus();
+    chrome.storage.sync.get("types", (stores) => {
+        const selectElement = document.getElementById("type");
+        const types = stores.types ?? [];
+        for (const type of types) {
+            const text = TYPES.find((t) => t.value === type)?.text;
+            if (text) {
+                selectElement.options[selectElement.options.length] = new Option(text, type);
+            }
+        }
+    });
 });
 
 window.addEventListener("keypress", (event) => {
