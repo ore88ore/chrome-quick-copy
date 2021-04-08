@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     document.getElementById("type").focus();
     chrome.storage.sync.get("types", (stores) => {
         const selectElement = document.getElementById("type");
-        const types = stores.types ?? [];
+        const types = stores.types ?? TYPES.map((t) => t.value);
         for (const type of types) {
             const text = TYPES.find((t) => t.value === type)?.text;
             if (text) {
