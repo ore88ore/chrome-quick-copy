@@ -1,7 +1,7 @@
 {
   "name": "Quick Copy - IDなどをサクッとコピー",
   "short_name": "Quick Copy",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "manifest_version": 3,
   "description": "IDなどを手軽に素早くコピーする拡張機能です",
   "icons": {
