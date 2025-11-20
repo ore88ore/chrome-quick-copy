@@ -2,7 +2,7 @@ let types = [];
 
 window.addEventListener("load", () => {
     chrome.storage.sync.get({
-        types: ["ulid", "uuid", "unixtime", "unixtime_msec"]
+        types: ["ulid", "uuid", "uuidv7", "unixtime", "unixtime_msec", "iso8601_utc", "iso8601_local"]
     }, function (items) {
         types = items.types;
         for (const type of types) {

@@ -3,8 +3,11 @@ import {generate} from "./generate.js";
 const TYPES = [
     {text: "ULID", value: "ulid"},
     {text: "UUID(v4)", value: "uuid"},
+    {text: "UUID(v7)", value: "uuidv7"},
     {text: "Unixtime", value: "unixtime"},
-    {text: "Unixtime(msec)", value: "unixtime_msec"}
+    {text: "Unixtime(msec)", value: "unixtime_msec"},
+    {text: "ISO8601(UTC)", value: "iso8601_utc"},
+    {text: "ISO8601(Local)", value: "iso8601_local"}
 ];
 
 window.addEventListener("load", () => {
