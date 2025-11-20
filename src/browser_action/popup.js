@@ -32,6 +32,7 @@ window.addEventListener("keypress", (event) => {
 });
 
 document.getElementById("copy").onclick = async () => {
+    await new Promise(resolve => setTimeout(resolve, 100));
     const selectedType = document.getElementById("type").value;
     const copyText = generate(selectedType);
     await navigator.clipboard.writeText(copyText);
